@@ -12,26 +12,23 @@ console.log('connected...')
 7. Display output.
 8. Numbers divisible by 3 will be replaced with 'chimi'.
 9. Numbers divisible by 5 will be replaced with 'changas'.
+10. If numbers are not divisible by 3 or 5 paste generated number.
+11. Print each number on a seperate line.
 */
 
 let userInput = prompt('Enter a number!');
-let lineNumber;
 
-if (isNaN(userInput)) {
-        alert('You have not entered a number...refresh')
-    } else {
-        for (let i= 1; i <= userInput; i++) {
-                if ( userInput % 3 === 0 && userInput % 5 === 0) {
-                    document.querySelector('p').innerHTML = 'chimichangas'
-                } else if ( userInput % 3 === 0) {
-                    document.querySelector('p').innerHTML = 'chimi'
-                } else if ( userInput % 5 === 0) {
-                    document.querySelector('p').innerHTML = 'changas'
-                } else {
-                    document.querySelector('p').innerHTML = i;
-            for (let j=1; j<=i; j++) {
-                document.querySelector('p').innerHTML += '<br>';
-            }
-        }
+for (let i= 1; i <= userInput; i++) {
+
+    if (isNaN(userInput)) {
+            alert('You have not entered a number...refresh')
+        } else if ( i % 3 === 0 && i % 5 === 0) {
+            document.querySelector('p').innerHTML += 'chimichangas' + '<br>';
+        } else if ( i % 3 === 0) {
+            document.querySelector('p').innerHTML += 'chimi' + '<br>';
+        } else if ( i % 5 === 0) {
+            document.querySelector('p').innerHTML += 'changas' + '<br>';
+        } else {
+            document.querySelector('p').innerHTML += i + '<br>';
     }
 } 
