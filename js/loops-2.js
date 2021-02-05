@@ -18,10 +18,10 @@ if (isNaN(userInput)) {
 } else {
 
 for (let i=1; i<= userInput; i++) {
-    triangle = ' ';
+    triangle;
     for (let j=1; j<= i; j++) {
         triangle += character;
     } 
-    return document.querySelector('p').innerHTML = traingle + '<br>';
+     document.querySelector('p').innerHTML = (triangle + '<br>');
     }
 }
